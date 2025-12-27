@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pemesanan Tiket - Wisata Bromo</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="form-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Wisata Bromo</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="destinations.html">Destinasi</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="form.html" class="active">Pemesanan</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="https://wa.me/62895639068080">WhatsApp Kami</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="page-title dark-background" data-aos="fade" style="background-image: url('assets/img/gunung.jpeg');">
+      <div class="container position-relative text-center">
+        <h1>Formulir Pemesanan</h1>
+        <p>Lengkapi data diri Anda untuk reservasi paket wisata Bromo.</p>
+        <nav class="breadcrumbs">
+          <ol class="justify-content-center">
+            <li><a href="index.html">Beranda</a></li>
+            <li class="current">Form Booking</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section id="bromo-booking-section" class="section bg-light">
+      <div class="container" data-aos="fade-up">
+        <div class="bromo-form-wrapper shadow-lg">
+          <h2 class="mb-4">Detail Reservasi</h2>
+          
+          <div class="bromo-form-group">
+            <label class="bromo-form-label">Nama Lengkap</label>
+            <input type="text" id="nama" class="bromo-form-control" placeholder="Masukkan nama sesuai KTP">
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 bromo-form-group">
+              <label class="bromo-form-label">Email</label>
+              <input type="email" id="email" class="bromo-form-control" placeholder="alamat@email.com">
+            </div>
+            <div class="col-md-6 bromo-form-group">
+              <label class="bromo-form-label">Nomor WhatsApp (HP)</label>
+              <input type="tel" id="whatsapp" class="bromo-form-control" placeholder="Contoh: 08123456xxx">
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="bromo-form-group">
+            <label class="bromo-form-label">Destinasi Utama</label>
+            <select id="destinasi" class="bromo-form-control">
+              <option value="" disabled selected>Pilih destinasi utama Anda</option>
+              <option value="Penanjakan 1 (Sunrise)">Penanjakan 1 (Sunrise)</option>
+              <option value="Kawah Bromo">Kawah Bromo</option>
+              <option value="Bukit Teletubbies (Savana)">Bukit Teletubbies (Savana)</option>
+              <option value="Pasir Berbisik">Pasir Berbisik</option>
+              <option value="Paket Lengkap (6 Spot)">Paket Lengkap (6 Spot)</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 bromo-form-group">
+              <label class="bromo-form-label">Tanggal Keberangkatan</label>
+              <input type="date" id="tanggal" class="bromo-form-control">
+            </div>
+            <div class="col-md-6 bromo-form-group">
+              <label class="bromo-form-label">Jumlah Orang</label>
+              <input type="number" id="jumlahOrang" class="bromo-form-control" placeholder="Contoh: 4" min="1">
+            </div>
+          </div>
+
+          <div class="bromo-form-group">
+            <label class="bromo-form-label">Jenis Paket</label>
+            <select id="paketHarian" class="bromo-form-control">
+              <option value="" disabled selected>Pilih jenis paket</option>
+              <option value="Private Trip">Private Trip (Eksklusif)</option>
+              <option value="Open Trip">Open Trip (Gabungan)</option>
+              <option value="Family Gathering">Family Gathering</option>
+              <option value="Honeymoon Package">Honeymoon Package</option>
+            </select>
+          </div>
+
+          <button onclick="kirimKeWhatsApp()" class="bromo-btn-submit mt-3">
+            <i class="bi bi-whatsapp me-2"></i>Kirim Pesanan ke WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>FAQ</h2>
+        <p>Pertanyaan umum seputar pemesanan tiket dan tour Bromo</p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="faq-container">
+              
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="100">
+                <h3>Kapan waktu terbaik untuk memesan?</h3>
+                <div class="faq-content">
+                  <p>Disarankan melakukan pemesanan H-7 sebelum keberangkatan, terutama pada akhir pekan atau hari libur nasional untuk memastikan ketersediaan armada Jeep dan izin masuk TNBTS.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Apa saja perlengkapan yang wajib dibawa?</h3>
+                <div class="faq-content">
+                  <p>Suhu di Bromo bisa mencapai 5-10 derajat celcius. Wajib membawa jaket tebal, sarung tangan, syal, masker (untuk debu pasir), dan sepatu yang nyaman untuk mendaki tangga kawah.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <h3>Apakah harga sudah termasuk tiket masuk TNBTS?</h3>
+                <div class="faq-content">
+                  <p>Tergantung paket yang dipilih. Pada paket Private Trip, tiket masuk biasanya sudah termasuk, namun untuk Open Trip tiket seringkali dibayar masing-masing oleh peserta secara online.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+ <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">WISATA BROMO</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. Kota Malang, Lowok Waru</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 8956 3906 8080</span></p>
+            <p><strong>Email:</strong> <span>wisatabromo@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Berada</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="destinations.html">Destinasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="form.html">Pemesan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Network</h4>
+          <ul>
+            <li><i class="https://www.artikdia.web.id/" target="_blank"></i> <a href="#">Artikdia Web ID</a></li>
+            <li><i class="https://www.otomagz.id/" target="_blank"></i> <a href="#">Otomagz ID</a></li>
+            <li><i class="https://www.seminarkit.id/" target="_blank"></i> <a href="#">Vendor Seminar Kit</a></li>
+            <li><i class="https://www.nglencer.id/" target="_blank"></i> <a href="#">Ngelencer ID</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+            <div class="social-links d-flex">
+            <a href="https://wa.me/62895639068080"target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://wa.me/62895639068080"target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/62895639068080"target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/62895639068080"target="_blank"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function kirimKeWhatsApp() {
+      // Ambil elemen
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+      const destinasi = document.getElementById("destinasi").value;
+      const tanggal = document.getElementById("tanggal").value;
+      const jumlahOrang = document.getElementById("jumlahOrang").value;
+      const paket = document.getElementById("paketHarian").value;
+
+      // Validasi
+      if (!nama || !email || !whatsapp || !destinasi || !tanggal || !jumlahOrang || !paket) {
+        alert("Mohon lengkapi semua data formulir (Data Diri & Reservasi)!");
+        return;
+      }
+
+      // Format Pesan
+      const message = `Halo Admin Wisata Bromo,%0A%0ASaya ingin melakukan reservasi tour dengan detail berikut:%0A%0A` +
+        `👤 *Data Pemesan*:%0A` +
+        `- Nama: ${nama}%0A` +
+        `- Email: ${email}%0A` +
+        `- WhatsApp: ${whatsapp}%0A%0A` +
+        `🏔️ *Detail Tour*:%0A` +
+        `- Destinasi: *${destinasi}*%0A` +
+        `- Tanggal: *${tanggal}*%0A` +
+        `- Jumlah: *${jumlahOrang} Orang*%0A` +
+        `- Paket: *${paket}*%0A%0A` +
+        `Mohon konfirmasi ketersediaan dan total pembayarannya. Terima kasih!`;
+      
+      // Redirect
+      window.open(`https://wa.me/62895639068080?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
